@@ -31,9 +31,9 @@ public class MyApplicationListener implements ApplicationListener<ContextRefresh
         addDelayQueue();
     }
 
-    public void addDelayQueue(){
+    public void addDelayQueue() {
         log.info("项目启动初始化队列,将需要放入队列的添加到队列");
-        MyDelayEntity entity = new MyDelayEntity(0L,new Date().getTime());
+        MyDelayEntity entity = new MyDelayEntity(0L, new Date().getTime());
         delayQueueManage.add(entity);
     }
 }

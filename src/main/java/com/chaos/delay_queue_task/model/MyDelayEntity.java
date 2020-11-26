@@ -27,7 +27,8 @@ public class MyDelayEntity implements Delayed {
 
     /**
      * 定义了剩余到期时间
-     *超时判定是通过getDelay(TimeUnit.NANOSECONDS)方法的返回值小于等于0来判断
+     * 超时判定是通过getDelay(TimeUnit.NANOSECONDS)方法的返回值小于等于0来判断
+     *
      * @param unit
      * @return
      */
@@ -37,7 +38,8 @@ public class MyDelayEntity implements Delayed {
     }
 
     /**
-     *定义了元素排序规则
+     * 定义了元素排序规则
+     *
      * @param other
      * @return
      */

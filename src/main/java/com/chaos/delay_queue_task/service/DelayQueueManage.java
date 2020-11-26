@@ -21,7 +21,7 @@ public class DelayQueueManage implements CommandLineRunner {
     private static final Logger logger = LogManager.getLogger(DelayQueueManage.class);
 
     private DelayQueue<MyDelayEntity> startQueue = new DelayQueue<>();
-    
+
 
     @Override
     public void run(String... args) throws Exception {
@@ -31,12 +31,12 @@ public class DelayQueueManage implements CommandLineRunner {
     /**
      * 延时任务执行线程
      */
-    public void executeThread(){
-        while (true){
+    public void executeThread() {
+        while (true) {
             try {
                 MyDelayEntity task = startQueue.take();
                 processTask(task);
-            }catch (Exception e){
+            } catch (Exception e) {
 
             }
         }
@@ -44,10 +44,11 @@ public class DelayQueueManage implements CommandLineRunner {
 
     /**
      * 执行业务
+     *
      * @param task
      */
-    public void processTask(MyDelayEntity task){
-        logger.info("当前执行的是："+task.getId());
+    public void processTask(MyDelayEntity task) {
+        logger.info("当前执行的是：" + task.getId());
     }
 
 

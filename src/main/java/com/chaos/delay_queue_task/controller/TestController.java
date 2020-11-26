@@ -25,15 +25,17 @@ public class TestController {
 
 
     @GetMapping("/addDelay")
-    public void testDelayQueue(String time){
+    public void testDelayQueue(String time) {
         try {
 
             SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
             Date date = format.parse(time);
             date.getTime();
-            MyDelayEntity order = new MyDelayEntity(1L,date.getTime());
+            MyDelayEntity order = new MyDelayEntity(1L, date.getTime());
+            MyDelayEntity order2 = new MyDelayEntity(1L, date.getTime());
             delayQueueManage.add(order);
-        }catch (Exception e){
+            delayQueueManage.add(order2);
+        } catch (Exception e) {
 
         }
     }
